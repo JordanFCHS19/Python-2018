@@ -1,6 +1,8 @@
 import sys
 import random
 import time
+import os
+import datetime
 
 print ("Hello! Welcome to the Magiical 8 ball!")
 play = input("Would you like to play? yes or no - ")
@@ -27,11 +29,11 @@ else:
         
 values_responses = [1,2,3,4,5,6,7,8,9,10,11,12]
 values_loading = [1,2,3,4,5,6,7,8,9]
-values_greetings = [1,2,3,4,5,6,7]
+values_greetings = [1,2,3,4,5,6]
 value_sentences = [1,2,3]                
 loading = ["*thinks*...","hmmmmmm...","Checking my sources...","Searching...","One second...","Please be patient...","interesting...","uno momento...","aha!..."]
 responses = ["          Only the future will tell","          The answer lies in the future","          Ask again later","          404 Not Found","          Most likley","          No","          Yes","          Maybe","          Probably Not","          Who knows","          Calling 911","          Why don't you ask me later"]
-greetings = ["Good question,","Great Question!","Interesting...","Alright,","Okay","Alright,","You can ask me any question and you ask me that?? Whatever"]
+greetings = ["Good question,","Great Question!","Interesting...","Alright,","Okay","You can ask me any question and you ask me that?? Whatever"]
 sentences = [" I will now take 3 useless seconds of your life to randomly generate my answer.","I will look into my sources.","I don't know if i have the answer to that.."]
 time.sleep(2)
 
@@ -49,4 +51,7 @@ while question == "yes":
     
     print("------------------------------------------------------------")
     question = input("Would you like to ask another question? yes or no - ")
-    
+    if question == 'no':
+       os.system('clear')
+    else:
+        print(" ")
